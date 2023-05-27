@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try to catch</title>
+</head>
+<link rel="stylesheet" href="./style.css">
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="w-50">
+                <div class="login">
+                    <h1>Login Form</h1>
+                    <form action="">
+                        <div>
+                          <label for="Name">Name:- </label>
+                          <input type="text" placeholder="enter the name" id="name" />
+                        </div>
+                        <div>
+                          <label for="Name">Email:- </label>
+                          <input type="email" placeholder="enter the email" id="email" />
+                        </div>
+                        <div>
+                          <label for="Name">Password:- </label>
+                          <input type="password" placeholder="enter the password" id="password" />
+                          
+                        </div>
+                        <div>
+                          <label for="Name">Confirm Password:- </label>
+                          <input type="password" placeholder="enter the Confirm password" id="confirmp" />
+                        </div>
+                        <div>
+                          <input type="button" value="Submit" onclick="save()" class="button">
+                        </div>
+                      </form>
+                </div>
+            </div>
+            <div class="w-50">
+                <div class="img">
+                    <img src="img/5098293.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const save = () => {
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmp = document.getElementById("confirmp").value;
+            var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            var namecheck = /^[A-Za-z]+$/;
+
+            try {
+                if (!name && !email && !password && !confirmp) {
+                    alert("Fill all details");
+                    return false;
+                  } else if (!name) {
+                    alert("Fill the name");
+                    return false;
+                  } else if (!email) {
+                    alert("Fill the email");
+                    return false;
+                  } else if (!password) {
+                    alert("Fill the password");
+                    return false;
+                  } else if (!confirmp) {
+                    alert("Fill the confirm password");
+                    return false;
+                  } else if (password != confirmp) {
+                    alert("password are not same with your confirm password");
+                    return false;
+                  } else if (password.lenght >= 6 || password.lenght <= 16) {
+                    alert("password minmum number 6 and maximum number 16");
+                    return false;
+                  } else if (!name.match(namecheck)) {
+                    alert("enter the uppecase character");
+                    return false;
+                  } else if(!email.match(mailformat)){
+                    alert("invalid email");
+                    return false;
+                  } else {
+                    alert("form sumbit successfully");
+                  }
+                  document.getElementById("name").value = "";
+                  document.getElementById("email").value = "";
+                  document.getElementById("password").value = "";
+                  document.getElementById("confirmp").value = "";
+            } 
+            catch (error) {
+                alert("error");
+            }
+        }
+    </script>
+</body>
+</html>

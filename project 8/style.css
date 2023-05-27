@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   background-color: #F3E0E2;
+}
+.container {
+    width: 1120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.w-50{
+    width: 50%;
+}
+.formcontant{
+    background-color: #FF4456;
+    padding: 100px 40px;
+    text-align: center;
+    width: 100%;
+    height: 550px;
+    border-radius: 0 10px  10px 0;
+}
+.formcontant h1{
+    font-size: 45px;
+    padding: 0 45px 16px 45px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    letter-spacing: 1px;
+}
+.formcontant h5{
+    font-size: 17px;
+    padding: 0 32px 0 32px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    letter-spacing: 0.5px;
+}
+.login{
+    background-color: #FFFFFF;
+    padding: 40px 25px;
+    width: 100%;
+    height: 550px;
+    border-radius: 10px 0  0 10px;
+}
+.login h1{
+    font-size: 35px;
+    padding-bottom: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+     text-align: center;
+}
+
+form{
+    background-color: rgb(123, 178, 227);
+    padding: 20px;
+}
+form h1{
+    font-size: 40px;
+    text-align: center;
+    color: black;
+    padding-bottom: 10px;
+}
+form label{
+    font-size: 22px;
+    color: rgb(0, 64, 123);
+    margin-right: 30px;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+form input{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    padding: 5px;
+}
+form .button{
+    width: 50%;
+    height: 40px;
+    margin-left: 25%;
+    border-radius: 10px;
+    background-color: darkblue;
+    color: white;
+    font-size: 15px;
+}
+
+.img img{
+    width: 550px;
+    border-radius: 0 10px  10px 0;
+}
+ 
